@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+
+    <color name="light_blue_300">#99B9F4</color>
+    <color name="light_blue_500">#71A0F6</color>
+    <color name="light_blue_800">#2F77FF</color>
+
+    <color name="red_600">#E53935</color>
+    <color name="red_300">#EA8686</color>
+    <color name="red_A200">#ff3636</color>
+
+    <color name="yellow_400">#FFEE58</color>
+
+    <color name="green_A700">#2dba79</color>
+
+    <color name="grey_100">#f6f8fb</color>
+    <color name="grey_200">#EEEEEE</color>
+    <color name="grey_300">#d4def2</color>
+    <color name="grey_400">#BDBDBD</color>
+    <color name="grey_500">#A1A1A1</color>
+    <color name="grey_800">#69798A</color>
+
+
+    <color name="blue_grey_100">#F4F4F4</color>
+    <color name="blue_grey_400">#78909C</color>
+    <color name="blue_grey_800">#37474F</color>
+    <color name="blue_grey_900">#20262C</color>
+
+    <color name="transparent">#00FFFFFF</color>
+
+    <color name="dialog_info">@color/light_blue_800</color>
+    <color name="dialog_success">@color/green_A700</color>
+    <color name="dialog_error">@color/red_600</color>
+
+    <color name="default_text_color">@color/grey_800</color>
+
+</resources>

@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="vm"
+            type="com.mahdi.ztd.mvvm.authentication.loginfragment.LoginViewModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:fitsSystemWindows="true">
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/v_guide_start"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="@dimen/side_padding" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/v_guide_end"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="@dimen/side_padding" />
+
+        <ImageView
+            android:id="@+id/image_english"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="@dimen/default_margin_top"
+            android:contentDescription="@null"
+            app:layout_constraintEnd_toEndOf="@id/v_guide_end"
+            app:layout_constraintStart_toStartOf="@id/v_guide_start"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/text_english"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintEnd_toEndOf="@id/image_english"
+            app:layout_constraintStart_toStartOf="@id/image_english"
+            app:layout_constraintTop_toBottomOf="@id/image_english" />
+
+
+        <ImageView
+            android:id="@+id/image_farsi"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="@dimen/default_margin_top"
+            android:contentDescription="@null"
+            app:layout_constraintStart_toStartOf="@id/v_guide_start"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/text_farsi"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintEnd_toEndOf="@id/image_farsi"
+            app:layout_constraintStart_toStartOf="@id/image_farsi"
+            app:layout_constraintTop_toBottomOf="@id/image_farsi" />
+
+        <ImageView
+            android:id="@+id/image_arabic"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="@dimen/default_margin_top"
+            android:contentDescription="@null"
+            app:layout_constraintEnd_toEndOf="@id/v_guide_end"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/text_arabic"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintEnd_toEndOf="@id/image_arabic"
+            app:layout_constraintStart_toStartOf="@id/image_arabic"
+            app:layout_constraintTop_toBottomOf="@id/image_arabic" />
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:contentDescription="@null"
+            app:layout_constraintBottom_toTopOf="@id/phone_number_text_input_layout"
+            app:layout_constraintEnd_toEndOf="@id/v_guide_end"
+            app:layout_constraintStart_toStartOf="@id/v_guide_start"
+            app:layout_constraintTop_toBottomOf="@id/image_english" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/login_description"
+            android:textColor="@color/default_text_color"
+            android:gravity="center"
+            android:textSize="@dimen/text_size_normal"
+            android:layout_marginBottom="@dimen/margin_medium"
+            app:layout_constraintBottom_toTopOf="@id/phone_number_text_input_layout"
+            app:layout_constraintEnd_toEndOf="@id/v_guide_end"
+            app:layout_constraintStart_toStartOf="@id/v_guide_start" />
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/phone_number_text_input_layout"
+            style="@style/TextInputLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layoutDirection="ltr"
+            android:layout_marginStart="@dimen/side_padding"
+            android:layout_marginEnd="@dimen/side_padding"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:prefixText=" +98 "
+            app:prefixTextColor="@color/default_text_color">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/phone_number_text_input_edit_text"
+                style="@style/TextLarge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/phone_number"
+                android:imeOptions="actionDone"
+                android:inputType="phone"
+                android:lines="1"
+                android:maxEms="10"
+                android:maxLength="10"
+                android:singleLine="true"
+                android:text="@={vm.phoneNumber}"
+                android:textColor="@color/default_text_color"
+                tools:text="123" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/v_guide_start"
+            android:text="@string/read_terms"
+            android:textColor="@color/light_blue_800"
+            app:layout_constraintBottom_toTopOf="@id/btn_next"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_next"
+            style="@style/AppTheme.Button.Primary"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/input_height"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
+            android:onClick="@{() -> vm.onLoginClicked()}"
+            android:text="@string/login"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/v_guide_end"
+            app:layout_constraintStart_toStartOf="@id/v_guide_start"
+            app:layout_constraintVertical_bias="1" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

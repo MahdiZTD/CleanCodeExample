@@ -1,0 +1,124 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Televisit" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorPrimaryVariant">@color/grey_100</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/red_600</item>
+        <item name="colorSecondaryVariant">@color/red_300</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+        <item name="android:fontFamily">@font/iransans_regular</item>
+        <item name="alertDialogTheme">@style/AlertDialogTheme</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+        <style name="AlertDialogTheme" parent="ThemeOverlay.MaterialComponents.Dialog.Alert">
+        <item name="buttonBarNegativeButtonStyle">@style/NegativeButtonStyle</item>
+        <item name="buttonBarPositiveButtonStyle">@style/PositiveButtonStyle</item>
+    </style>
+
+
+    <style name="FontLight">
+        <item name="fontFamily">@font/iransans_regular</item>
+    </style>
+
+    <style name="FontMedium">
+        <item name="fontFamily">@font/iransans_regular</item>
+    </style>
+
+    <style name="FontBold">
+        <item name="fontFamily">@font/iransans_regular</item>
+    </style>
+
+
+    <style name="TextLarge" parent="FontMedium">
+        <item name="android:textSize">@dimen/text_size_large</item>
+    </style>
+
+    <style name="NegativeButtonStyle" parent="Widget.MaterialComponents.Button.TextButton.Dialog">
+        <item name="android:textColor">@color/red_600</item>
+    </style>
+
+    <style name="PositiveButtonStyle" parent="Widget.MaterialComponents.Button.TextButton.Dialog">
+        <item name="android:textColor">@color/red_600</item>
+    </style>
+
+    <style name="BottomSheetDialogStyle.Animation" parent="@android:style/Animation.Activity">
+        <item name="android:windowEnterAnimation">@anim/dialog_bottom_sheet_enter</item>
+        <item name="android:windowExitAnimation">@anim/dialog_bottom_sheet_exit</item>
+    </style>
+
+    <style name="MessageDialogStyle" parent="Theme.AppCompat.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:windowAnimationStyle">@style/BottomSheetDialogStyle.Animation</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowIsFloating">true</item>
+    </style>
+
+    <style name="PageTitle" parent="Theme.Televisit">
+        <item name="android:textSize">@dimen/font_size_huge</item>
+        <item name="android:textColor">@color/blue_grey_900</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="InputLabel" parent="Theme.Televisit">
+        <item name="android:textSize">@dimen/font_size_small</item>
+        <item name="android:textColor">@color/blue_grey_400</item>
+    </style>
+
+    <style name="TextNormal" parent="Theme.Televisit">
+        <item name="android:textSize">@dimen/font_size_small</item>
+        <item name="android:textColor">@color/blue_grey_900</item>
+    </style>
+
+    <style name="TextSubTitle" parent="Theme.Televisit">
+        <item name="android:textSize">@dimen/font_size_very_small</item>
+        <item name="android:textColor">@color/blue_grey_800</item>
+    </style>
+
+    <style name="TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="hintTextColor">@color/black</item>
+        <item name="hintTextAppearance">@style/TextLarge</item>
+        <item name="boxCornerRadiusTopStart">@dimen/radius_normal</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/radius_normal</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/radius_normal</item>
+        <item name="boxCornerRadiusBottomEnd">@dimen/radius_normal</item>
+        <item name="boxStrokeColor">@color/grey_400</item>
+        <item name="endIconDrawable">@drawable/svg_ic_cancel_grey_circle</item>
+        <item name="endIconMode">clear_text</item>
+        <item name="errorEnabled">true</item>
+        <item name="errorTextColor">@color/red_A200</item>
+        <item name="errorIconDrawable">@null</item>
+        <item name="fontFamily">@font/iransans_regular</item>
+    </style>
+
+    <style name="InputEditText" parent="Theme.Televisit">
+        <item name="android:textSize">@dimen/font_size_medium</item>
+        <item name="android:textColor">@color/blue_grey_900</item>
+        <item name="android:background">@drawable/bg_input</item>
+        <item name="android:textColorHint">@color/blue_grey_400</item>
+        <item name="android:paddingStart">@dimen/side_padding</item>
+        <item name="android:paddingEnd">@dimen/side_padding</item>
+        <item name="layout_constraintWidth_max">500dp</item>
+        <item name="layout_constraintHorizontal_bias">0</item>
+    </style>
+
+    <style name="AppTheme.Button.Primary" parent="Base.Widget.AppCompat.Button.Borderless">
+        <item name="android:textAllCaps">false</item>
+        <item name="android:background">@drawable/bg_button</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:paddingStart">@dimen/side_padding</item>
+        <item name="android:paddingEnd">@dimen/side_padding</item>
+        <item name="android:textSize">@dimen/text_size_normal</item>
+        <item name="android:clickable">true</item>
+    </style>
+</resources>

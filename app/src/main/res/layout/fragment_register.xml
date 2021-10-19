@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="vm"
+            type="com.mahdi.ztd.mvvm.authentication.registerfragment.RegisterViewModel" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/v_guide_start"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="@dimen/side_padding" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/v_guide_end"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:orientation="vertical"
+                app:layout_constraintGuide_end="@dimen/side_padding" />
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/phone_number_text_input_layout"
+                style="@style/TextInputLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_medium"
+                app:layout_constraintBottom_toTopOf="@+id/name_text_input_layout"
+                app:layout_constraintEnd_toEndOf="@id/v_guide_end"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="@id/v_guide_start"
+                app:layout_constraintTop_toTopOf="parent"
+                app:prefixTextColor="@color/default_text_color">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/phone_number_text_input_edit_text"
+                    style="@style/TextLarge"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/phone_number"
+                    android:imeOptions="actionDone"
+                    android:inputType="phone"
+                    android:text="@={vm.phoneNumber}"
+                    android:lines="1"
+                    android:maxEms="11"
+                    android:maxLength="11"
+                    android:singleLine="true"
+                    android:textColor="@color/default_text_color" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/name_text_input_layout"
+                style="@style/TextInputLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_medium"
+                app:layout_constraintBottom_toTopOf="@+id/last_name_text_input_layout"
+                app:layout_constraintEnd_toEndOf="@id/v_guide_end"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="@id/v_guide_start"
+                app:layout_constraintTop_toBottomOf="@+id/phone_number_text_input_layout"
+                app:prefixTextColor="@color/default_text_color">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/name_text_input_edit_text"
+                    style="@style/TextLarge"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/name"
+                    android:imeOptions="actionDone"
+                    android:inputType="text"
+                    android:text="@={vm.name}"
+                    android:singleLine="true"
+                    android:textColor="@color/default_text_color" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/last_name_text_input_layout"
+                style="@style/TextInputLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_medium"
+                app:layout_constraintBottom_toTopOf="@+id/spinner_gender"
+                app:layout_constraintEnd_toEndOf="@id/v_guide_end"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="@id/v_guide_start"
+                app:layout_constraintTop_toBottomOf="@+id/name_text_input_layout"
+                app:prefixTextColor="@color/default_text_color">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/last_name_text_input_edit_text"
+                    style="@style/TextLarge"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/last_name"
+                    android:imeOptions="actionDone"
+                    android:inputType="text"
+                    android:singleLine="true"
+                    android:text="@={vm.lastName}"
+                    android:textColor="@color/default_text_color" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/spinner_gender"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/input_height"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:background="@drawable/bg_spinner"
+                android:entries="@{vm.genders}"
+                app:layout_constraintBottom_toTopOf="@+id/password_text_input_layout"
+                app:layout_constraintEnd_toEndOf="@id/v_guide_end"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="@id/v_guide_start"
+                app:layout_constraintTop_toBottomOf="@+id/last_name_text_input_layout" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/password_text_input_layout"
+                style="@style/TextInputLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_medium"
+                app:layout_constraintBottom_toTopOf="@+id/re_password_text_input_layout"
+                app:layout_constraintEnd_toEndOf="@id/v_guide_end"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="@id/v_guide_start"
+                app:layout_constraintTop_toBottomOf="@+id/spinner_gender"
+                app:prefixTextColor="@color/default_text_color">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/password_text_input_edit_text"
+                    style="@style/TextLarge"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/password"
+                    android:imeOptions="actionDone"
+                    android:inputType="textPassword"
+                    android:text="@={vm.password}"
+                    android:singleLine="true"
+                    android:textColor="@color/default_text_color" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/re_password_text_input_layout"
+                style="@style/TextInputLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_medium"
+                app:layout_constraintBottom_toTopOf="@+id/btn_next"
+                app:layout_constraintEnd_toEndOf="@id/v_guide_end"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="@id/v_guide_start"
+                app:layout_constraintTop_toBottomOf="@+id/password_text_input_layout"
+                app:prefixTextColor="@color/default_text_color">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/re_password_text_input_edit_text"
+                    style="@style/TextLarge"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/re_password"
+                    android:imeOptions="actionDone"
+                    android:text="@={vm.rePassword}"
+                    android:inputType="textPassword"
+                    android:singleLine="true"
+                    android:textColor="@color/default_text_color" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_next"
+                style="@style/AppTheme.Button.Primary"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/input_height"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="30dp"
+                android:onClick="@{() -> vm.registerClicked()}"
+                android:text="@string/confirm"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/v_guide_end"
+                app:layout_constraintStart_toStartOf="@id/v_guide_start"
+                app:layout_constraintVertical_bias="1" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+</layout>

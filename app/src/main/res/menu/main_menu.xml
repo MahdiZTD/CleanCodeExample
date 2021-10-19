@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+    <item android:id="@+id/doctorsFragment"
+        android:title="@string/home"
+        app:showAsAction="ifRoom"
+        android:orderInCategory="1"
+        android:icon="@drawable/svg_ic_home_grey"/>
+
+    <item android:id="@+id/chatsFragment"
+        android:title="@string/chats"
+        app:showAsAction="ifRoom"
+        android:orderInCategory="2"
+        android:icon="@drawable/svg_ic_chats_grey"/>
+
+    <item android:id="@+id/healthBanksFragment"
+        android:title="@string/health_banks"
+        app:showAsAction="ifRoom"
+        android:orderInCategory="3"
+        android:icon="@drawable/svg_ic_health_grey"/>
+
+
+    <item android:id="@+id/settingFragment"
+        android:title="@string/profile"
+        app:showAsAction="always"
+        android:orderInCategory="4"
+        android:icon="@drawable/svg_ic_profile_grey"/>
+
+</menu>

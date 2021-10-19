@@ -1,0 +1,52 @@
+<resources>
+    <string name="app_name">تله ویزیت</string>
+    <string name="ok">باشه</string>
+    <string name="change_setting">تغییر تنظیمات</string>
+    <string name="login">ورود</string>
+    <string name="email">ایمیل</string>
+    <string name="password">رمز عبور</string>
+
+    <string name="register">ثبت نام</string>
+
+    <string name="login_description">برای ورود و یا ثبت نام در<font fgcolor='#ff3636'> تله ویزیت</font>، شماره موبایل خود را وارد نمائید</string>
+
+    <string name="error">خطا</string>
+    <string name="general_error_message">خطایی رخ داده است…</string>
+    <string name="phone_number">شماره همراه</string>
+    <string name="verify_otp">تایید کد</string>
+    <string name="confirm">تایید</string>
+
+    <string name="language_english" translatable="false">English</string>
+    <string name="language_farsi" translatable="false">فارسی</string>
+    <string name="language_arabic" translatable="false">العربیه</string>
+
+    <string name="read_terms">مطالعه قوانین و شرایط و سیاست حفظ حریم شخصی</string>
+    <string name="resend_verify_otp">ارسال مجدد کد</string>
+    <string name="name">نام</string>
+    <string name="last_name">نام خانوادگی</string>
+    <string name="re_password">تکرار رمز عبور</string>
+    <string name="error_fields_are_empty">لطفا تمامی مقادیر را پر نمایید</string>
+    <string name="error_password_not_matched">رمز عبور و تکرار رمز عبور همخوانی ندارد</string>
+    <string name="user_name">نام کاربری</string>
+    <string name="home">خانه</string>
+    <string name="doctors">پزشکان</string>
+    <string name="health_banks">بانک سلامت</string>
+    <string name="profile">پروفایل من</string>
+    <string name="chats">گفت‌وگوها</string>
+
+    <string name="search">جستجو</string>
+    <string name="filters">فیلتر ها</string>
+    <string name="categories">دسته ها</string>
+    <string name="online">آنلاین</string>
+    <string name="by_text">متنی</string>
+    <string name="by_call">تلفنی</string>
+    <string name="get_consult">دریافت مشاوره</string>
+    <string name="present_termin">نوبت دهی حضوری</string>
+    <string name="online_visit">ویزیت آنلاین</string>
+    <string name="continue_chat">ادامه گفتگو</string>
+
+    <string-array name="gender">
+        <item>مرد</item>
+        <item>زن</item>
+    </string-array>
+</resources>
